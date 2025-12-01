@@ -482,8 +482,8 @@ u_FEM = np.loadtxt("values_FEM.csv", delimiter = ",") # FEM solution
 vertices_FEM = np.loadtxt("vertices_FEM.csv", delimiter = ",") # vertices
 
 # Downsampled FEM solution
-u_FEM_ds = np.loadtxt("values_FEM_downsampled2_surf.csv", delimiter = ",") # FEM solution
-vertices_FEM_ds = np.loadtxt("vertices_FEM_downsampled2_surf.csv", delimiter = ",") # vertices
+u_FEM_ds = np.loadtxt("values_FEM_downsampled.csv", delimiter = ",") # FEM solution
+vertices_FEM_ds = np.loadtxt("vertices_FEM_downsampled.csv", delimiter = ",") # vertices
 
 # # Manually downsampling FEM solution
 # Nx_down = 15 #10 # Number of downsampled points in the x direction
@@ -577,5 +577,6 @@ if __name__ == '__main__':
 #     H10norm = util.getH10norm(F11, F12, F13, F21, F22, F23, F31, F32, F33, len(x), len(y), len(z), x[1] - x[0], y[1] - y[0], z[1] - z[0])
 #     print("L2 norm = %.10f" % L2norm)
 #     print("H10 norm = %.10f" % H10norm)
+
 
 torch.save(dem.model.state_dict(), "parameters.pt")
